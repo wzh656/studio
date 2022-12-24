@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		 
+		<title>创新工作室 - 作品</title>
+		<meta name="generator" content="Jekyll v3.9.0" />
+		<meta property="og:title" content="创新工作室" />
+		<meta property="og:locale" content="zh_CN" />
+		<meta name="description" content="创新工作室 | 游戏是一种艺术" />
+		<meta property="og:description" content="创新工作室 | 游戏是一种艺术" />
+		<link rel="canonical" href="https://studio.pages.dev/" />
+		<meta property="og:url" content="https://studio.pages.dev/" />
+		<meta property="og:site_name" content="Innovation Studio" />
+
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<meta content="always" name="referrer" />
+		<meta name="theme-color" content="#157878" />
+		
+		<link rel="stylesheet" href="css/index.css" />
+		
+		<!-- DaoVoice -->
+		<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/00efc38c.js","daovoice")</script>
+		<script async defer>
+			daovoice('init', {
+				app_id: "00efc38c"
+			});
+			daovoice('update');
+		</script>
+		
+		<!-- gitter -->
+		<script defer>
+			((window.gitter = {}).chat = {}).options = {
+				room: 'wzh656/Studio'
+			};
+		</script>
+		<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+		
+		<script src="js/vue3.js"></script>
+		
+	</head>
+	<body>
+	<app>
+		<section>
+			<header id="header">
+				<a id="back" href="index.html">
+					<svg style="fill: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80">
+						<polygon points="50 0, 0 50, 20 50, 20 80, 80 80, 80 50, 100 50" />
+					</svg>
+				</a>
+				<h1>创新工作室</h1>
+				<p>作品：{{work}}</p>
+			</header>
+			<img id="icon" v-if="work" :src="data[work].icon" />
+			<div id="text" v-if="work">
+				<h2 v-text="work"></h2>
+				<div v-html="data[work].description"></div>
+				<ul class="information">
+					<li><b>作者</b>：{{data[work].author}}</li>
+				</ul>
+				<h2 v-if="data[work].links">链接</h2>
+				<ul class="links">
+					<li v-for="(link, text) in data[work].links">
+						<a target="_blank" :href="link">{{text}}<br>({{link}})</a>
+					</li>
+				</ul>
+			</div>
+			<div id="error" v-if="!work">
+				<h2>Not Found</h2>
+				<p>抱歉，创新工作室的作品中并没有找到“{{work}}”哦，也许他走丢了呢</p>
+				<button><a href="index.html">返回主页</a></button>
+			</div>
+		</section>
+	</app>
+	
+<script>
+location.getQueryString = function(name){
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	var r = location.search.substr(1).match(reg);
+	if(r!=null) return decodeURIComponent(r[2]);
+};
+
+const app = Vue.createApp({
+	data(){
+		return {
+			data: {
+				"4D五子棋": {
+					icon: "./img/works/4D-Gobang.png",
+					description: "<p>创新与经典的烧脑结合，体验与众不同的五子棋玩法</p>",
+					author: "wzh",
+					links: {
+						"TapTap": "https://taptap.cn/app/222701/",
+						"网页版游玩1(Netlify)": "https://4d-gobang.netlify.app/",
+						"网页版游玩2(Cloudflare)": "https://4d-gobang.pages.dev/",
+						"网页版游玩3(GitHub)": "https://wzh656.github.io/gobang/",
+						"GitHub 项目": "https://github.com/wzh656/gobang/",
+						"Gitee 项目": "https://gitee.com/wzh656/gobang/",
+						"GitLab 项目": "https://gitlab.com/wzh656/gobang/"
+					}
+				},
+				"我的世界（仿）": {
+					icon: "./img/works/MinecraftWeb.png",
+					description: 
+						`<p>一个独具创新与真实特色的我的世界风格仿制版游戏<del>（黑历了啊啊）</del></p>
+						<p>支持<i>Android/Window/浏览器</i>平台</p>
+						<p>了解更多请前往官网链接</p>`,
+					author: "wzh",
+					links: {
+						"安装包下载(蓝奏云 密码wzh)": "https://wwm.lanzouj.com/b02j8yogj",
+						"安装包下载(腾讯微云)": "https://share.weiyun.com/WkQTgj8H",
+						"网页版游玩1(Netlify)": "https://minecraftweb.netlify.app/",
+						"网页版游玩2(Cloudflare)": "https://myminecraft.pages.dev/",
+						"网页版游玩3(GitHub)": "https://wzh656.github.io/MinecraftWeb/",
+						"网页版游玩4(Gitee旧版 由Jason克隆)": "https://jason-bowen-zheng.gitee.io/MinecraftWeb/",
+						"GitHub 项目": "https://github.com/wzh656/MinecraftWeb/",
+						"Gitee 项目": "https://gitee.com/wzh656/Minecraft/",
+						"GitLab 项目": "https://gitlab.com/wzh656/MinecraftWeb/"
+					}
+				},
+				"三体运动模拟": {
+					icon: "./img/works/Threebody-Simulation.png",
+					description: "<p>三体问题的计算机三维动画效果演示</p>",
+					author: "wzh",
+					links: {
+						"网页版游玩(GitHub)": "https://wzh656.github.io/threebody-simulation/",
+						"网页版游玩(版本2)": "https://wzh656.github.io/others/ThreeBody.html",
+						"GitHub 项目": "https://github.com/wzh656/threebody-simulation/",
+						"Gitee 项目": "https://gitee.com/wzh656/threebody-simulation/"
+					}
+				},
+				"化学Helper": {
+					icon: "./img/works/Chemistry-Helper.png",
+					description: "<p>学生党专用的化学(及数学)工具（初三拙作）</p>",
+					author: "wzh",
+					links: {
+						"网页版(GitHub)": "https://wzh656.github.io/others/some/chemistry.html"
+					}
+				},
+				"超级绘图": {
+					icon: "./img/works/Draw.png",
+					description: "<p>一个学生党专用的函数绘图工具</p>",
+					author: "wzh",
+					links: {
+						"安卓下载(蓝奏云 密码wzh)": "https://wwdd.lanzoue.com/b02jznmtg",
+						"网页版(GitHub)": "https://wzh656.github.io/others/draw.html"
+					}
+				},
+				"Js Plus": {
+					icon: "./img/works/Js-Plus.png",
+					description: "<p>js+ 是一个js的拓展库，根据实践经验在原生js的基础上添加、重写了一些函数，并借鉴了一些其他语言的函数，使得编程更加便捷。</p>",
+					author: "wzh",
+					links: {
+						"GitHub 项目": "https://github.com/wzh656/js-plus/",
+						"Gitee 项目": "https://gitee.com/wzh656/js-plus/"
+					}
+				},
+				"质因数分解": {
+					icon: "./img/works/PrimeFactorization.png",
+					description: "<p>计算质因数分解和欧拉质数公式的工具</p>",
+					author: "wzh",
+					links: {
+						"网页版(GitHub)": "https://wzh656.github.io/others/some/PrimeFactorization.html",
+						"GitHub 项目": "https://github.com/wzh656/js-plus/",
+						"Gitee 项目": "https://gitee.com/wzh656/js-plus/"
+					}
+				},
+				"闹鬼监狱": {
+					icon: "./img/works/闹鬼监狱.jpg",
+					description: `<iframe src="http://player.bilibili.com/player.html?aid=644285382&bvid=BV1jY4y1A76U&page=1" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="" ></iframe>`,
+					author: "wzh & xjh",
+					links: {
+						"bilibili": "https://www.bilibili.com/video/BV1jY4y1A76U/",
+					}
+				},
+				"青春": {
+					icon: "./img/works/music.png",
+					description: `<audio src="https://wzh-data.netlify.app/music/Louise/piano.mp3" controls></audio>`,
+					author: "Louise",
+					links: {
+						"下载": "https://wzh-data.netlify.app/music/Louise/piano.mp3"
+					}
+				},
+				"无题": {
+					icon: "./img/works/music.png",
+					description: `<audio src="https://wzh-data.netlify.app/music/wzh/Virus.mp3" controls></audio>`,
+					author: "wzh",
+					links: {
+						"下载": "https://wzh-data.netlify.app/music/wzh/Virus.mp3"
+					}
+				},
+				"片段": {
+					icon: "./img/works/music.png",
+					description: `<p>D#大调</p><audio src="https://wzh-data.netlify.app/music/wzh/New Song-Eb.mp3" controls></audio>`,
+					author: "wzh",
+					links: {
+						"下载": "https://wzh-data.netlify.app/music/wzh/New Song-Eb.mp3"
+					}
+				},
+				"博麗": {
+					icon: "./img/works/painting.png",
+					description: `<img src="https://wzh-data.netlify.app/paintings/赖后宜/博麗.jpg" style="width: 100%;" />`,
+					author: "lhy"
+				},
+				"手绘二维码": {
+					icon: "./img/works/painting.png",
+					description: `
+					<div style="display: flex; width: 100%; overflow-x: auto;">
+						<img src="https://wzh-data.netlify.app/paintings/手绘二维码/qrcode1.jpg" style="flex: none; width: 90%; height: auto; margin: 1px;" />
+						<img src="https://wzh-data.netlify.app/paintings/手绘二维码/qrcode2.jpg" style="flex: none; width: 90%; height: auto; margin: 1px;" />
+						<img src="https://wzh-data.netlify.app/paintings/手绘二维码/qrcode3.jpg" style="flex: none; width: 90%; height: auto; margin: 1px;" />
+					</div>
+					`,
+					author: "wzh & lhy"
+				}
+			},
+			work: location.getQueryString("work")
+		}
+	},
+	mounted(){
+		document.title = "创新工作室 - 作品:" + this.work;
+	}
+}).mount("app");
+</script>
+	
+	</body>
+</html>

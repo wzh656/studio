@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		 
+		<title>创新工作室</title>
+		<meta name="generator" content="Jekyll v3.9.0" />
+		<meta property="og:title" content="创新工作室" />
+		<meta property="og:locale" content="zh_CN" />
+		<meta name="description" content="创新工作室 | 游戏是一种艺术" />
+		<meta property="og:description" content="创新工作室 | 游戏是一种艺术" />
+		<link rel="canonical" href="https://studio.pages.dev/" />
+		<meta property="og:url" content="https://studio.pages.dev/" />
+		<meta property="og:site_name" content="Innovation Studio" />
+
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<meta content="always" name="referrer" />
+		<meta name="theme-color" content="#157878" />
+		
+		<link rel="stylesheet" href="css/index.css" />
+		
+		<!-- DaoVoice -->
+		<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/00efc38c.js","daovoice")</script>
+		<script async defer>
+			daovoice('init', {
+				app_id: "00efc38c"
+			});
+			daovoice('update');
+		</script>
+		
+		<!-- gitter -->
+		<script defer>
+			((window.gitter = {}).chat = {}).options = {
+				room: 'wzh656/InnovationStudio'
+			};
+		</script>
+		<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+		
+		<script src="js/vue3.js"></script>
+		
+	</head>
+	<body>
+	<app>
+		<section>
+			<header id="header">
+				<h1>创新工作室</h1>
+				<small v-text="subtitle.value"></small>
+			</header>
+			<div id="text">
+				<h2>简介</h2>
+				<p>一个坚持创新创意之上的小型独立工作室，致力于游戏、网站、美术、音乐等艺术创作。</p>
+				<h2>成员</h2>
+				<ul class="members">
+					<li><a href="member.html?member=wzh">室长/总负责人/创始人/工程师：<b>WZH(かみ)(芜櫂)</b></a></li>
+					<!--<li>艺术总监/拾遗：Louise</li>-->
+					<li><a href="member.html?member=deskgood">吉祥物/拾遗：<b>Deskgood(桌子好)</b></a></li>
+					<li><a href="member.html?member=lhy">美工/拾遗：<b>LHY(直)</b></a></li>
+					<li><a href="member.html?member=xjh">配音/传媒/拾遗：<b>XJH(佳)</b></a></li>
+					<!--<li>音乐/拾遗：Kevin</li>-->
+				</ul>
+				<h2>作品</h2>
+				<div v-for="(list, type) in works">
+					<h3 v-text="type"></h3>
+					<ul class="works">
+						<li v-for="(icon, name) in list">
+							<a :href="'work.html?work='+name">
+								<img :src="icon" />
+								<span v-text="name"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<h2>联系/加入我们</h2>
+				<ul class="contact">
+					<li v-for="(link, text) in contact">
+						<a target="_blank" :href="link" v-text="text"></a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</app>
+	
+<script>
+const app = Vue.createApp({
+	data(){
+		return {
+			subtitle: {
+				value: "游戏是一种艺术",
+				index: [0, 0],
+				dir: +1,
+				list: [
+					"游戏是一种艺术",
+					"Game is an Art.",
+					"创新是发展的动力"
+				]
+			},
+			works: {
+				"游戏类": {
+					"4D五子棋": "./img/works/4D-Gobang.png",
+					"我的世界（仿）": "./img/works/MinecraftWeb.png"
+				},
+				"应用类": {
+					"三体运动模拟": "./img/works/Threebody-Simulation.png",
+					"化学Helper": "./img/works/Chemistry-Helper.png",
+					"超级绘图": "./img/works/Draw.png",
+					"Js Plus": "./img/works/Js-Plus.png",
+					"质因数分解": "./img/works/PrimeFactorization.png"
+				},
+				"视频类": {
+					"闹鬼监狱": "./img/works/闹鬼监狱.jpg"
+				},
+				"音乐类": {
+					"青春": "./img/works/music.png",
+					"无题": "./img/works/music.png",
+					"片段": "./img/works/music.png"
+				},
+				"美术类": {
+					"博麗": "./img/works/painting.png",
+					"手绘二维码": "./img/works/painting.png"
+				}
+			},
+			contact: {
+				"交流区": "https://wzh.glitch.me/public/chatrooms/?room=InnovationStudio",
+				"Gitter 交流区": "https://gitter.im/wzh656/InnovationStudio",
+				"QQ群：789248085": "https://jq.qq.com/?_wv=1027&k=Gmaub2u1"
+			}
+		}
+	},
+	mounted(){
+		setInterval(()=>{
+			this.subtitle.index[1] += this.subtitle.dir;
+			if (this.subtitle.index[1] >= this.subtitle.list[this.subtitle.index[0]].length){
+				this.subtitle.dir = -1;
+			}
+			if (this.subtitle.index[1] <= 0){
+				this.subtitle.dir = +1;
+				if (++this.subtitle.index[0] >= this.subtitle.list.length)
+					this.subtitle.index[0] = 0;
+			}
+			this.subtitle.value = this.subtitle.list[this.subtitle.index[0]].substr(0, this.subtitle.index[1]) + "|";
+		}, 300);
+	}
+}).mount("app");
+</script>
+	
+	</body>
+</html>
