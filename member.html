@@ -55,6 +55,8 @@
 			<div id="text" v-if="member" :class="data[member].float? 'fadein': ''">
 				<h2 v-text="member" :class="data[member].float"></h2>
 				<ul class="information">
+					<li><b>性别</b>：{{data[member].sex}}</li>
+					<li v-if="data[member].birthday"><b>生日</b>：{{data[member].birthday}}</li>
 					<li><b>职务</b>：{{data[member].position}}</li>
 					<li><b>代号</b>：{{data[member].nickname}}</li>
 					<li><b>加入时间</b>：{{data[member].joinTime}}</li>
@@ -88,6 +90,8 @@ const app = Vue.createApp({
 				wzh: {
 					image: "./img/members/wzh.png",
 					float: "left",
+					sex: "男",
+					birthday: "2006年10月1日",
 					position: "室长/总负责人/创始人/工程师",
 					nickname: "かみ/芜櫂",
 					joinTime: "2021年8月",
@@ -103,6 +107,8 @@ const app = Vue.createApp({
 				deskgood: {
 					image: "./img/members/deskgood.png",
 					float: "right",
+					sex: "男",
+					birthday: "2007年1月15日",
 					position: "吉祥物/拾遗",
 					nickname: "桌子好",
 					joinTime: "2021年8月",
@@ -116,6 +122,7 @@ const app = Vue.createApp({
 				lhy: {
 					image: "./img/members/lhy.png",
 					float: "right",
+					sex: "男",
 					position: "美工/拾遗",
 					nickname: "直",
 					joinTime: "2022年11月",
@@ -127,6 +134,8 @@ const app = Vue.createApp({
 				xjh: {
 					image: "./img/members/xjh.png",
 					float: "left",
+					sex: "男",
+					birthday: "2006年5月22日",
 					position: "配音/传媒/拾遗",
 					nickname: "佳",
 					joinTime: "2022年11月",
