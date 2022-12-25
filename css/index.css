@@ -207,7 +207,8 @@ a{
 	color: #fff;
 }
 @media only screen and (orientation:landscape){
-	#text ul.contact > li{
+	#text ul.contact > li,
+	#text ul.links > li{
 		width: 60%;
 	}
 }
