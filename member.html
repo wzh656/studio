@@ -78,6 +78,7 @@
 			<img id="image" v-if="member" :src="data[member].image" />
 			<div id="text" v-if="member" :class="data[member].float? 'fadein': ''">
 				<h2 v-text="member" :class="data[member].float"></h2>
+				<div v-text="data[member].description" class="description"></div>
 				<ul class="information">
 					<li><b>性别</b>：{{data[member].sex}}</li>
 					<li v-if="data[member].birthday"><b>生日</b>：{{data[member].birthday}}</li>
@@ -118,6 +119,7 @@ const app = Vue.createApp({
 					birthday: "2006年10月1日",
 					position: "室长/总负责人/创始人/工程师",
 					nickname: "かみ/芜櫂",
+					description: "心怀天下者",
 					joinTime: "2021年8月",
 					contact: {
 						"联系室长(DaoVoice)": "http://chat.daovoice.io?id=00efc38c",
@@ -135,6 +137,7 @@ const app = Vue.createApp({
 					birthday: "2007年1月15日",
 					position: "吉祥物/拾遗",
 					nickname: "桌子好",
+					description: "无忧乐观者",
 					joinTime: "2021年8月",
 					contact: {
 						"GitHub @ deskgood": "https://github.com/deskgood/",
@@ -147,8 +150,9 @@ const app = Vue.createApp({
 					image: "./img/members/lhy.png",
 					float: "right",
 					sex: "男",
-					position: "美工/拾遗",
+					position: "美术/拾遗",
 					nickname: "直",
+					description: "文艺热爱者",
 					joinTime: "2022年11月",
 					contact: {
 						"E-mail: 3085338625@qq.com": "mailto:3085338625@qq.com",
@@ -162,6 +166,7 @@ const app = Vue.createApp({
 					birthday: "2006年5月22日",
 					position: "配音/传媒/拾遗",
 					nickname: "佳",
+					description: "一意孤行者",
 					joinTime: "2022年11月",
 					contact: {
 						"E-mail: 3500294206@qq.com": "mailto:3500294206@qq.com",

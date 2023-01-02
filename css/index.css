@@ -98,6 +98,7 @@ a{
 	height: 5rem;
 	border-radius: 50%;
 	margin: 1rem auto;
+	filter: drop-shadow(-3px 3px 5px #666);
 }
 
 #text > h2{
@@ -116,6 +117,11 @@ a{
 }
 #text p{
 	text-indent: 2em;
+}
+#text .description{
+	text-align: center;
+	color: #223366;
+	font-weight: bold;
 }
 @keyframes floatBottom{
 	from{ margin-top: -2rem; }
@@ -172,6 +178,7 @@ a{
 	background-color: rgba(51, 102, 34, 0.4);
 	color: #362;
 	transition: background-color 0.2s, color 0.2s;
+	box-shadow: 3px 3px 5px rgba(51, 102, 34, 0.6);
 }
 #text ul.works > li:hover{
 	background-color: #336622;
@@ -183,6 +190,7 @@ a{
 	height: 5rem;
 	border-radius: 50%;
 	margin: auto;
+	filter: drop-shadow(-3px 3px 5px #666);
 }
 #text ul.works > li span{
 	display: block;
@@ -196,6 +204,7 @@ a{
 	padding: 0.6rem;
 	background-color: rgba(102, 51, 34, 0.4);
 	color: #632;
+	border: 1px solid #632;
 	transition: background-color 0.2s, color 0.2s;
 }
 #text ul.links > li{

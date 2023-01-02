@@ -73,7 +73,7 @@
 					</svg>
 				</a>
 				<h1>创新工作室</h1>
-				<p>作品：{{work}}</p>
+				<p>作品：{{work || "？"}}</p>
 			</header>
 			<img id="icon" v-if="work" :src="data[work].icon" />
 			<div id="text" v-if="work">
@@ -243,7 +243,7 @@ const app = Vue.createApp({
 		}
 	},
 	mounted(){
-		document.title = "创新工作室 - 作品:" + this.work;
+		document.title = "创新工作室 - 作品:" + this.work || "？";
 	}
 }).mount("app");
 </script>
