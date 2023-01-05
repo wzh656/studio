@@ -75,8 +75,9 @@ a{
 }
 
 #text{
+	flex: 1;
 	margin: 0.3rem;
-	padding-bottom: 3rem;
+	padding-bottom: 1rem;
 }
 @media only screen and (orientation:landscape){
 	#text{
@@ -258,4 +259,10 @@ a{
 }
 #error > button:active{
 	background-color: #125;
+}
+
+footer{
+	padding: 0.5rem;
+	text-align: center;
+	background-color: #ddd;
 }
