@@ -1,102 +1,102 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="UTF-8">
-		 
-		<title>创新工作室 - 作品</title>
-		<meta name="generator" content="Jekyll v3.9.0" />
-		<meta property="og:title" content="创新工作室" />
-		<meta property="og:locale" content="zh_CN" />
-		<meta name="description" content="创新工作室 | 游戏是一种艺术" />
-		<meta property="og:description" content="创新工作室 | 游戏是一种艺术" />
-		<link rel="canonical" href="https://studio.pages.dev/" />
-		<meta property="og:url" content="https://studio.pages.dev/" />
-		<meta property="og:site_name" content="Innovation Studio" />
+<head>
+	<meta charset="UTF-8">
+	 
+	<title>创新工作室 - 作品</title>
+	<meta name="generator" content="Jekyll v3.9.0" />
+	<meta property="og:title" content="创新工作室" />
+	<meta property="og:locale" content="zh_CN" />
+	<meta name="description" content="创新工作室 | 游戏是一种艺术" />
+	<meta property="og:description" content="创新工作室 | 游戏是一种艺术" />
+	<link rel="canonical" href="https://studio.pages.dev/" />
+	<meta property="og:url" content="https://studio.pages.dev/" />
+	<meta property="og:site_name" content="Innovation Studio" />
 
-		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-		<meta content="always" name="referrer" />
-		<meta name="theme-color" content="#157878" />
-		
-		<link rel="stylesheet" href="css/index.css" />
-		
-		<!-- DaoVoice -->
-		<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/00efc38c.js","daovoice")</script>
-		<script async defer>
-			daovoice('init', {
-				app_id: "00efc38c"
-			});
-			daovoice('update');
-		</script>
-		
-		<!-- gitter -->
-		<script defer>
-			((window.gitter = {}).chat = {}).options = {
-				room: 'wzh656/Studio'
-			};
-		</script>
-		<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-		
-		<!-- 百度统计 -->
-		<script>
-		var _hmt = _hmt || [];
-		(function() {
-			var hm = document.createElement("script");
-			hm.src = "https://hm.baidu.com/hm.js?810c7e8d2bb50f53069219856e2d32fd";
-			var s = document.getElementsByTagName("script")[0]; 
-			s.parentNode.insertBefore(hm, s);
-		})();
-		</script>
-		
-		<!-- Google Ads -->
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7578417515774173" crossorigin="anonymous"></script>
-		
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-E23K6GHTX7"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		
-		gtag('config', 'G-E23K6GHTX7');
-		</script>
-		
-		<script src="js/vue3.js"></script>
-		
-	</head>
-	<body>
-	<app>
-		<section>
-			<header id="header">
-				<a id="back" href="index.html">
-					<svg style="fill: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80">
-						<polygon points="50 0, 0 50, 20 50, 20 80, 80 80, 80 50, 100 50" />
-					</svg>
-				</a>
-				<h1>创新工作室</h1>
-				<p>作品：{{work || "？"}}</p>
-			</header>
-			<img id="icon" v-if="work" :src="data[work].icon" />
-			<div id="text" v-if="work">
-				<h2 v-text="work"></h2>
-				<div v-html="data[work].description"></div>
-				<ul class="information">
-					<li><b>作者</b>：{{data[work].author}}</li>
-				</ul>
-				<h2 v-if="data[work].links">链接</h2>
-				<ul class="links">
-					<li v-for="(link, text) in data[work].links">
-						<a target="_blank" :href="link">{{text}}<br>({{link}})</a>
-					</li>
-				</ul>
-			</div>
-			<div id="error" v-if="!work">
-				<h2>Not Found</h2>
-				<p>抱歉，创新工作室的作品中并没有找到“{{work}}”哦，也许他走丢了呢</p>
-				<button><a href="index.html">返回主页</a></button>
-			</div>
-		</section>
-	</app>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="always" name="referrer" />
+	<meta name="theme-color" content="#157878" />
 	
+	<link rel="stylesheet" href="css/index.css" />
+	
+	<!-- DaoVoice -->
+	<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/00efc38c.js","daovoice")</script>
+	<script async defer>
+		daovoice('init', {
+			app_id: "00efc38c"
+		});
+		daovoice('update');
+	</script>
+	
+	<!-- gitter -->
+	<script defer>
+		((window.gitter = {}).chat = {}).options = {
+			room: 'wzh656/Studio'
+		};
+	</script>
+	<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+	
+	<!-- 百度统计 -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?810c7e8d2bb50f53069219856e2d32fd";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	
+	<!-- Google Ads -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7578417515774173" crossorigin="anonymous"></script>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-E23K6GHTX7"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	
+	gtag('config', 'G-E23K6GHTX7');
+	</script>
+	
+	<script src="js/vue3.js"></script>
+	
+</head>
+<body>
+<app>
+	<section>
+		<header id="header">
+			<a id="back" href="index.html">
+				<svg style="fill: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80">
+					<polygon points="50 0, 0 50, 20 50, 20 80, 80 80, 80 50, 100 50" />
+				</svg>
+			</a>
+			<h1>创新工作室</h1>
+			<p>作品：{{work || "？"}}</p>
+		</header>
+		<img id="icon" v-if="work" :src="data[work].icon" />
+		<div id="text" v-if="work">
+			<h2 v-text="work"></h2>
+			<div v-html="data[work].description"></div>
+			<ul class="information">
+				<li><b>作者</b>：{{data[work].author}}</li>
+			</ul>
+			<h2 v-if="data[work].links">链接</h2>
+			<ul class="links">
+				<li v-for="(link, text) in data[work].links">
+					<a target="_blank" :href="link">{{text}}<br>({{link}})</a>
+				</li>
+			</ul>
+		</div>
+		<div id="error" v-if="!work">
+			<h2>Not Found</h2>
+			<p>抱歉，创新工作室的作品中并没有找到“{{work}}”哦，也许他走丢了呢</p>
+			<button><a href="index.html">返回主页</a></button>
+		</div>
+	</section>
+</app>
+
 <script>
 location.getQueryString = function(name){
 	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
@@ -252,6 +252,6 @@ const app = Vue.createApp({
 	}
 }).mount("app");
 </script>
-	
-	</body>
+
+</body>
 </html>
