@@ -22,9 +22,21 @@
 		margin: 0;
 		padding: 0;
 	}
+	app{
+		display: flex;
+		flex-direction: column;
+	}
+	section{
+		flex: 1;
+	}
 	img{
 		width: 100%;
 		height: auto;
+	}
+	footer{
+		padding: 0.5rem;
+		text-align: center;
+		background-color: #ddd;
 	}
 	</style>
 	
@@ -63,8 +75,15 @@
 	
 </head>
 <body>
-	<img src="./img/1.png" />
-	<img src="./img/2.png" />
-	
+<app>
+	<section>
+		<img src="./img/1.png" />
+		<img src="./img/2.png" />
+	</section>
+	<div><center>海报制作：かみ</center></div>
+	<footer>
+		Copyright © 2023 创新工作室<br>All rights reserved.
+	</footer>
+</app>
 </body>
 </html>
