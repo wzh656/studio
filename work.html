@@ -80,7 +80,7 @@
 			<h2 v-text="work"></h2>
 			<div v-html="data[work].description"></div>
 			<ul class="information">
-				<li><b>作者</b>：{{data[work].author}}</li>
+				<li v-html="data[work].author"></li>
 			</ul>
 			<h2 v-if="data[work].links">链接</h2>
 			<ul class="links">
@@ -114,7 +114,7 @@ const app = Vue.createApp({
 				"4D五子棋": {
 					icon: "./img/works/4D-Gobang.png",
 					description: "<p>创新与经典的烧脑结合，体验与众不同的五子棋玩法</p>",
-					author: "wzh",
+					author: "<b>作者</b>：かみ",
 					links: {
 						"TapTap": "https://taptap.cn/app/222701/",
 						"网页版游玩1(Netlify)": "https://4d-gobang.netlify.app/",
@@ -131,7 +131,7 @@ const app = Vue.createApp({
 						`<p>一个独具创新与真实特色的我的世界风格仿制版游戏<del>（黑历了啊啊）</del></p>
 						<p>支持<i>Android/Window/浏览器</i>平台</p>
 						<p>了解更多请前往官网链接</p>`,
-					author: "wzh",
+					author: "<b>作者</b>：かみ",
 					links: {
 						"安装包下载(蓝奏云 密码wzh)": "https://wwm.lanzouj.com/b02j8yogj",
 						"安装包下载(腾讯微云)": "https://share.weiyun.com/WkQTgj8H",
@@ -147,7 +147,7 @@ const app = Vue.createApp({
 				"三体运动模拟": {
 					icon: "./img/works/Threebody-Simulation.png",
 					description: "<p>三体问题的计算机三维动画效果演示</p>",
-					author: "wzh",
+					author: "<b>作者</b>：かみ",
 					links: {
 						"网页版游玩(GitHub)": "https://wzh656.github.io/threebody-simulation/",
 						"网页版游玩(版本2)": "https://wzh656.github.io/others/ThreeBody.html",
@@ -158,7 +158,7 @@ const app = Vue.createApp({
 				"化学Helper": {
 					icon: "./img/works/Chemistry-Helper.png",
 					description: "<p>学生党专用的化学(及数学)工具（初三拙作）</p>",
-					author: "wzh",
+					author: "<b>作者</b>：かみ",
 					links: {
 						"网页版(GitHub)": "https://wzh656.github.io/others/some/chemistry.html"
 					}
@@ -166,7 +166,7 @@ const app = Vue.createApp({
 				"超级绘图": {
 					icon: "./img/works/Draw.png",
 					description: "<p>一个学生党专用的函数绘图工具</p>",
-					author: "wzh",
+					author: "<b>作者</b>：かみ",
 					links: {
 						"安卓下载(蓝奏云 密码wzh)": "https://wwdd.lanzoue.com/b02jznmtg",
 						"网页版(GitHub)": "https://wzh656.github.io/others/draw.html"
@@ -175,7 +175,7 @@ const app = Vue.createApp({
 				"Js Plus": {
 					icon: "./img/works/Js-Plus.png",
 					description: "<p>js+ 是一个js的拓展库，根据实践经验在原生js的基础上添加、重写了一些函数，并借鉴了一些其他语言的函数，使得编程更加便捷。</p>",
-					author: "wzh",
+					author: "<b>作者</b>：かみ",
 					links: {
 						"GitHub 项目": "https://github.com/wzh656/js-plus/",
 						"Gitee 项目": "https://gitee.com/wzh656/js-plus/"
@@ -184,11 +184,57 @@ const app = Vue.createApp({
 				"质因数分解": {
 					icon: "./img/works/PrimeFactorization.png",
 					description: "<p>计算质因数分解和欧拉质数公式的工具</p>",
-					author: "wzh",
+					author: "<b>作者</b>：かみ",
 					links: {
 						"网页版(GitHub)": "https://wzh656.github.io/others/some/PrimeFactorization.html",
 						"GitHub 项目": "https://github.com/wzh656/js-plus/",
 						"Gitee 项目": "https://gitee.com/wzh656/js-plus/"
+					}
+				},
+				"洛天依演唱会《请让我留下点什么》": {
+					icon: "./img/works/洛天依演唱会《请让我留下点什么》.png",
+					description: `
+						<div style="display: flex;">
+							<iframe src="//player.bilibili.com/player.html?aid=644285382&bvid=BV1vY4y1d7yh&page=1" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100vw; height: 50vw;" ></iframe>
+						</div>`,
+					author: `<b>作曲</b>：wzh<br>
+						<b>编曲</b>：wzh<br>
+						<b>填词</b>：睿子<br>
+						<b>演唱</b>：洛天依`,
+					links: {
+						"bilibili": "https://www.bilibili.com/video/BV1vY4y1d7yh/",
+					}
+				},
+				"我的清新动画小剧场 联动我的世界": {
+					icon: "./img/works/我的清新动画小剧场 联动我的世界.png",
+					description: `
+						<div style="display: flex;">
+							<iframe src="//player.bilibili.com/player.html?aid=644285382&bvid=BV1k84y187iK&page=1" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100vw; height: 50vw;" ></iframe>
+						</div>`,
+					author: `<b>导演</b>：かみ<br>
+						<b>剧本</b>：佳佳 & かみ<br>
+						<b>制作</b>：かみ<br><br>
+						<b>声の出演</b><br>
+						<b>Jjj</b> 饰 张清心<br>
+						<b>银子</b> 饰 朱津莹 （本人）<br>
+						<b>佳佳</b> 饰 谢佳航 （本人）<br>
+						<b>Alien</b> 饰 邹平 （本人）<br>
+						<b>Deskgood</b> 饰 叶骞`,
+					links: {
+						"bilibili": "https://www.bilibili.com/video/BV1k84y187iK/",
+					}
+				},
+				"文外G2102高二体育节": {
+					icon: "./img/works/文外G2102高二体育节.png",
+					description: `
+						<div style="display: flex;">
+							<iframe src="//player.bilibili.com/player.html?aid=644285382&bvid=BV1SY4y1Z7FZ&page=1" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100vw; height: 50vw;" ></iframe>
+						</div>`,
+					author: `<b>摄影</b>：かみ & 佳佳 & wxq<br>
+						<b>相机提供</b>：xyt<br>
+						<b>剪辑</b>：かみ`,
+					links: {
+						"bilibili": "https://www.bilibili.com/video/BV1SY4y1Z7FZ/",
 					}
 				},
 				"闹鬼监狱": {
@@ -197,44 +243,66 @@ const app = Vue.createApp({
 						<div style="display: flex;">
 							<iframe src="//player.bilibili.com/player.html?aid=644285382&bvid=BV1jY4y1A76U&page=1" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100vw; height: 50vw;" ></iframe>
 						</div>`,
-					author: "wzh & xjh",
+					author: "<b>作者</b>：かみ & 佳佳",
 					links: {
 						"bilibili": "https://www.bilibili.com/video/BV1jY4y1A76U/",
+					}
+				},
+				"请让我留下点什么(重编曲版)": {
+					icon: "./img/works/music.png",
+					description: `<audio src="https://wzh-data.netlify.app/music/wzh/请让我留下点什么（重编曲版）.mp3" controls></audio>`,
+					author: `<b>作曲</b>：wzh<br>
+						<b>编曲</b>：wzh<br>
+						<b>填词</b>：睿子<br>
+						<b>演唱</b>：洛天依`,
+					links: {
+						"下载": "https://wzh-data.netlify.app/music/wzh/请让我留下点什么（重编曲版）.mp3"
+					}
+				},
+				"请让我留下点什么(live)": {
+					icon: "./img/works/music.png",
+					description: `<audio src="https://wzh-data.netlify.app/music/wzh/请让我留下点什么.mp3" controls></audio>`,
+					author: `<b>作曲</b>：wzh<br>
+						<b>编曲</b>：wzh<br>
+						<b>填词</b>：睿子<br>
+						<b>演唱</b>：洛天依`,
+					links: {
+						"下载": "https://wzh-data.netlify.app/music/wzh/请让我留下点什么.mp3"
+					}
+				},
+				"请让我留下点什么(钢琴版)": {
+					icon: "./img/works/music.png",
+					description: `<audio src="https://wzh-data.netlify.app/music/wzh/Puzzle in the Dream.mp3" controls></audio>`,
+					author: "<b>编曲</b>：かみ",
+					links: {
+						"下载": "https://wzh-data.netlify.app/music/wzh/Puzzle in the Dream.mp3"
+					}
+				},
+				"庭霰梦落": {
+					icon: "./img/works/music.png",
+					description: `<audio src="https://wzh-data.netlify.app/music/wzh/庭霰梦落.mp3" controls></audio>`,
+					author: "<b>编曲</b>：かみ",
+					links: {
+						"下载": "https://wzh-data.netlify.app/music/wzh/庭霰梦落.mp3"
 					}
 				},
 				"青春": {
 					icon: "./img/works/music.png",
 					description: `<audio src="https://wzh-data.netlify.app/music/Louise/piano.mp3" controls></audio>`,
-					author: "Louise",
+					author: "<b>作者</b>：Louise",
 					links: {
 						"下载": "https://wzh-data.netlify.app/music/Louise/piano.mp3"
-					}
-				},
-				"无题": {
-					icon: "./img/works/music.png",
-					description: `<audio src="https://wzh-data.netlify.app/music/wzh/Virus.mp3" controls></audio>`,
-					author: "wzh",
-					links: {
-						"下载": "https://wzh-data.netlify.app/music/wzh/Virus.mp3"
-					}
-				},
-				"片段": {
-					icon: "./img/works/music.png",
-					description: `<p>D#大调</p><audio src="https://wzh-data.netlify.app/music/wzh/New Song-Eb.mp3" controls></audio>`,
-					author: "wzh",
-					links: {
-						"下载": "https://wzh-data.netlify.app/music/wzh/New Song-Eb.mp3"
 					}
 				},
 				"张清心の行动": {
 					icon: "./img/works/painting.png",
 					description: `<img src="https://wzh-data.netlify.app/paintings/赖后宜/张清心の行动.jpg" style="width: 100%;" />`,
-					author: "lhy"
+					author: "<b>作者</b>：直直"
 				},
 				"博麗": {
 					icon: "./img/works/painting.png",
 					description: `<img src="https://wzh-data.netlify.app/paintings/赖后宜/博麗.jpg" style="width: 100%;" />`,
-					author: "lhy"
+					author: "<b>作者</b>：直直"
 				},
 				"手绘二维码": {
 					icon: "./img/works/painting.png",
@@ -244,7 +312,7 @@ const app = Vue.createApp({
 							<img src="https://wzh-data.netlify.app/paintings/手绘二维码/qrcode2.jpg" style="flex: none; width: 90%; height: auto; margin: 1px;" />
 							<img src="https://wzh-data.netlify.app/paintings/手绘二维码/qrcode3.jpg" style="flex: none; width: 90%; height: auto; margin: 1px;" />
 						</div>`,
-					author: "wzh & lhy"
+					author: "かみ & 直直"
 				}
 			},
 			work: location.getQueryString("work")
