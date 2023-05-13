@@ -1,3 +1,11 @@
+app{
+	animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+	from {filter: blur(50px);}
+	to {filter: blur(0px);}
+}
+
 section{
 	display: flex;
 	flex-direction: column;
