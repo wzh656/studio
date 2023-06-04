@@ -1,3 +1,6 @@
+/*
+* 全局配置
+*/
 app{
 	animation: fadeIn 2s;
 }
@@ -22,6 +25,10 @@ a{
 }
 
 
+
+/*
+* Header
+*/
 #header{
 	display: flex;
 	flex-direction: column;
@@ -64,6 +71,7 @@ a{
 		0px 0px 5px #b9b;
 }
 
+/* 返回 */
 #back{
 	position: absolute;
 	padding: 0.3rem;
@@ -71,17 +79,27 @@ a{
 #back > svg{
 	width: 2.5rem;
 	height: 2.5rem;
+	filter: drop-shadow(0px 0px 1px #fff);
 }
 
 
 
+/*
+* 成员图
+*/
 #image{
 	width: 100%;
 	height: auto;
 	filter: drop-shadow(-5px 5px 5px #236);
 	animation: floatBottom 1s;
+	box-shadow: 0px 1px 3px #236;
 }
 
+
+
+/*
+* 正文
+*/
 #text{
 	flex: 1;
 	margin: 0.3rem;
@@ -101,6 +119,7 @@ a{
 	opacity: 0;
 	animation: fadeIn 2.5s 0.5s forwards;
 }
+
 /* 图标 */
 #icon{
 	width: 5rem;
@@ -110,6 +129,8 @@ a{
 	filter: drop-shadow(-3px 3px 5px #666);
 }
 
+
+/* 正文 文本 */
 #text > h2{
 	margin: 0.5em;
 	border-left: 4px solid #236;
@@ -124,6 +145,12 @@ a{
 	float: right;
 	animation: floatTop 2.5s 1s forwards;
 }
+#text h3{
+	margin-left: 0.5em;
+	border-left: 0.5rem solid #362;
+	padding-left: 0.5em;
+	color: #362;
+}
 #text p{
 	text-indent: 2em;
 }
@@ -132,6 +159,7 @@ a{
 	color: #223366;
 	font-weight: bold;
 }
+/* 动画 */
 @keyframes floatBottom{
 	from{ margin-top: -2rem; }
 	to{ margin-top: 0; }
@@ -146,6 +174,9 @@ a{
 }
 
 
+/*
+* 列表 通用配置
+*/
 #text ul{
 	display: flex;
 	flex-wrap: wrap;
@@ -164,6 +195,7 @@ a{
 	text-weight: bold;
 }
 
+
 /* 成员列表/信息 */
 #text ul.members > li,
 #text ul.information > li{
@@ -179,6 +211,7 @@ a{
 	background-color: #332266;
 	color: #fff;
 }
+
 
 /* 作品列表 */
 #text ul.works > li{
@@ -204,6 +237,7 @@ a{
 #text ul.works > li span{
 	display: block;
 }
+
 
 /* 联系我们/链接 */
 #text ul.contact > li,
@@ -232,15 +266,37 @@ a{
 }
 
 
-#text h3{
-	margin-left: 0.5em;
-	border-left: 0.5rem solid #362;
-	padding-left: 0.5em;
-	color: #362;
+/* 赞助 */
+#text ul.sponsor{
+	display: flex;
+	width: 100%;
+	margin: 1rem 0;
+}
+#text ul.sponsor > li{
+	display: inline-block;
+	padding: 0;
+	width: 33%;
+	max-width: 360px;
+	box-shadow: 1px 1px 3px gray;
+}
+#text ul.sponsor > li > img{
+	width: 100%;
+}
+
+#text ul.afdian > li{
+	width: 100%;
+	margin: 1vw;
+	background-color: #8462db;
+	color: white;
+	box-shadow: 1px 1px 3px gray;
 }
 
 
 
+
+/*
+* 错误页
+*/
 #error{
 	flex: 1;
 	margin: 0.3rem;
@@ -256,7 +312,8 @@ a{
 #error > p{
 	margin: 0.6rem;
 }
-#error > button{
+#error > a{
+	display: block;
 	margin: 0.3rem auto;
 	padding: 0.6rem;
 	background-color: #236;
@@ -265,8 +322,9 @@ a{
 	border: none;
 	border-radius: 3px;
 	outline: none;
+	box-shadow: 0px 0px 3px #236;
 }
-#error > button:active{
+#error > a:active{
 	background-color: #125;
 }
 
